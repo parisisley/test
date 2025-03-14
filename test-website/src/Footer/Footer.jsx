@@ -3,6 +3,7 @@ import "./Footer.css";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
+import { FaEnvelope } from "react-icons/fa";  
 
 function Footer() {
   return (
@@ -19,6 +20,9 @@ function Footer() {
         </a>
         <a href="https://www.instagram.com/paris.isley" className="link">
           <FaInstagram className="icon" />
+        </a>
+        <a href="mailto:parisisley@gmail.com" className="link">
+          <FaEnvelope className="icon" />
         </a>
       </div>
     </div>

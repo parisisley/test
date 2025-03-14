@@ -20,7 +20,7 @@ function Navbar() {
           <a href="/services">Services</a>
         </li>
         <li>
-          <a href="#">Contact</a>
+          <a href="/contact">Contact</a>
         </li>
         <div className="close-menu" onClick={() => setIsOpen(false)}>
           ✖
