@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import "./Navbar.css";
 
-
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <nav className="navbar">
       <div className="logo">
+        
       </div>
       <ul className={isOpen ? "nav-menu open" : "nav-menu"}>
         <li>
