@@ -1,6 +1,6 @@
 import React from 'react';
-import ServiceCard from '../ServiceCard'; // Import from one level up
 import './Services.css';
+import ServiceCard from '../ServiceCard/ServiceCard';
 import webdesign from '../images/webdesign.png'; // Ensure the path is correct
 import printing from '../images/3Dprinting.png';
 import it from '../images/it.png';
