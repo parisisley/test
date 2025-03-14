@@ -1,68 +1,49 @@
-import React, { useState } from 'react';
-import './ContactPage.css';
+import React from "react";
+import { FaPhoneAlt, FaEnvelope, FaLinkedin, FaInstagram, FaGithub } from "react-icons/fa";
+import "./ContactPage.css";
 
 const ContactPage = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  });
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value
-    });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Process form data here (e.g., send it to a server)
-    alert(`Message Sent: ${formData.message}`);
-  };
-
   return (
     <div className="contact-container">
       <h1>Contact Me</h1>
-      <form onSubmit={handleSubmit} className="contact-form">
-        <div className="form-group">
-          <label htmlFor="name">Name:</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            placeholder="Enter your name"
-            required
-          />
+      <div className="contact-info">
+        <div className="contact-item">
+          <FaPhoneAlt className="icon" />
+          <span className="contact-text">
+            <a href="tel:+19542709492">Phone: 954-270-9492</a>
+          </span>
         </div>
-        <div className="form-group">
-          <label htmlFor="email">Email:</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            placeholder="Enter your email"
-            required
-          />
+        <div className="contact-item">
+          <FaEnvelope className="icon" />
+          <span className="contact-text">
+            <a href="mailto:parisisley@gmail.com">Email: parisisley@gmail.com</a>
+          </span>
         </div>
-        <div className="form-group">
-          <label htmlFor="message">Message:</label>
-          <textarea
-            id="message"
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-            placeholder="Your message"
-            required
-          ></textarea>
+        <div className="contact-item">
+          <FaLinkedin className="icon" />
+          <span className="contact-text">
+            <a href="https://www.linkedin.com/in/paris-isley/" target="_blank" rel="noopener noreferrer">
+              LinkedIn: Paris Isley
+            </a>
+          </span>
         </div>
-        <button type="submit" className="submit-btn">Send Message</button>
-      </form>
+        <div className="contact-item">
+          <FaInstagram className="icon" />
+          <span className="contact-text">
+            <a href="https://www.instagram.com/paris.isley" target="_blank" rel="noopener noreferrer">
+              Instagram: @paris.isley
+            </a>
+          </span>
+        </div>
+        <div className="contact-item">
+          <FaGithub className="icon" />
+          <span className="contact-text">
+            <a href="https://github.com/parisisley" target="_blank" rel="noopener noreferrer">
+              GitHub: @parisisley
+            </a>
+          </span>
+        </div>
+      </div>
     </div>
   );
 };
