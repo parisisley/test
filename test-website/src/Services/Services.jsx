@@ -12,7 +12,7 @@ import dropin from '../images/dropin.png';
 function Services() {
   const services = [
     {
-      title: '3D Farts',
+      title: '3D Printing',
       description: '3D printing services for prototypes, models, and unique designs.',
       imageUrl: printing,
       pricing: '',
