@@ -4,6 +4,7 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./Navbar/Navbar";
+import Footer from "./Footer/footer";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <div>
         <BrowserRouter>
           <Navbar />
+          <Footer/>
         </BrowserRouter>
       </div>
     </>
