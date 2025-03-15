@@ -1,7 +1,8 @@
-/* Add this to the top of your CSS file */
+/* Reset */
 body {
     margin: 0;
     padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 html {
@@ -12,6 +13,7 @@ html {
     box-sizing: inherit;
 }
 
+/* Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -19,87 +21,134 @@ html {
     background: #2c3e50;
     padding: 15px 20px;
     color: white;
-  }
-  
-  .logo {
+    position: relative;
+    z-index: 1000;
+}
+
+/* Logo */
+.logo {
     font-size: 1.5rem;
     font-weight: bold;
-  }
-  
-  .nav-menu {
+}
+
+.logo a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Navigation */
+.nav-menu {
     list-style: none;
     display: flex;
     gap: 20px;
-  }
-  
-  .nav-menu li {
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li {
     display: inline;
-  }
-  
-  .nav-menu a {
+}
+
+.nav-menu a {
     text-decoration: none;
     color: white;
     font-size: 1rem;
     transition: color 0.3s ease;
-  }
-  
-  .nav-menu a:hover {
+    display: block;
+    padding: 5px;
+}
+
+.nav-menu a:hover {
     color: #f39c12;
-  }
-  
-  .menu-toggle {
+}
+
+/* Menu Toggle Button */
+.menu-toggle {
     font-size: 1.8rem;
     cursor: pointer;
     display: none;
-  }
-  
-  .close-menu{
-    display: none;
-  }
-  
-  .eiffel-tower{
-    width: 50px;
+    background: none;
+    border: none;
     color: white;
-    background-color: white;
-  }
-  
-  @media screen and (max-width: 768px) {
+    padding: 0;
+}
+
+/* Close Button */
+.close-menu {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0;
+}
+
+/* Menu Overlay */
+.menu-overlay {
+    display: none;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    /* Show hamburger menu */
     .menu-toggle {
-      display: block;
+        display: block;
     }
-  
+
+    /* Slide-in menu */
     .nav-menu {
-      position: fixed;
-      top: 0;
-      right: -250px;
-      width: 250px;
-      height: 100%;
-      background: #34495e;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      display: flex;
-      gap: 30px;
-      transition: right 0.3s ease-in-out;
+        position: fixed;
+        top: 0;
+        right: -280px;
+        width: 250px;
+        height: 100vh;
+        background: #34495e;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 60px 20px 20px;
+        gap: 30px;
+        transition: right 0.3s ease-in-out;
+        box-shadow: -3px 0 10px rgba(0, 0, 0, 0.2);
+        z-index: 1001;
     }
-  
+
+    .nav-menu li {
+        width: 100%;
+    }
+
+    .nav-menu a {
+        padding: 10px 0;
+        font-size: 1.1rem;
+    }
+
+    /* Open state */
     .nav-menu.open {
-      right: 0;
+        right: 0;
     }
-  
-    /* Close button inside mobile menu */
-  .close-menu {
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    font-size: 1.8rem;
-    cursor: pointer;
-    color: white;
-  }
-  
-  .close-menu:hover {
-    color: #f39c12;
-  }
-  
-  }
-  
+
+    /* Close button */
+    .close-menu {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+    }
+
+    .close-menu:hover {
+        color: #f39c12;
+    }
+    
+    /* Overlay */
+    .menu-overlay {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+    }
+}
