@@ -31,3 +31,24 @@ header {
     color: #4a2f27; /* Darker brown */
   }
   
+  @media (max-width: 576px) {
+    body {
+      font-size: 16px; /* Base font size */
+    }
+    
+    h1 {
+      font-size: 2rem;
+    }
+    
+    h2 {
+      font-size: 1.8rem;
+    }
+    
+    h3 {
+      font-size: 1.4rem;
+    }
+    
+    p {
+      font-size: 1rem;
+    }
+  }

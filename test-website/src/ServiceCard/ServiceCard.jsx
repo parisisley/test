@@ -16,8 +16,11 @@ const ServiceCard = ({ service }) => {
       {/* Service Card */}
       <div className="service-card" onClick={() => setIsOpen(true)}>
         <img src={service.imageUrl} alt={service.title} />
-        <h3>{service.title}</h3>
-        <p>{service.description}</p>
+        <div className="service-content">
+          <h3>{service.title}</h3>
+          <p>{service.description}</p>
+          <div className="pricing">{service.pricing.split('.')[0]}</div>
+        </div>
       </div>
 
       {/* Modal */}
@@ -29,7 +32,6 @@ const ServiceCard = ({ service }) => {
             </button>
             <h2>{service.title}</h2>
             <p>{service.description}</p>
-            {/* Display pricing */}
             <p><strong>Pricing: </strong>{service.pricing}</p>
           </div>
         </div>
