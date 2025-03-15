@@ -1,0 +1,189 @@
+/* Reset - applied only to navbar elements */
+.navbar *,
+.navbar *:before,
+.navbar *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header wrapper to manage both navbar and spacer */
+.header-wrapper {
+  width: 100%;
+  position: relative;
+}
+
+/* Navbar Base */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
+  padding: 15px 0;
+  background-color: #161a30;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar spacer - creates space below navbar equal to navbar height */
+.navbar-spacer {
+  height: 65px; /* Should match navbar height + padding */
+  width: 100%;
+}
+
+/* Scrolled state adds more opacity and box shadow */
+.navbar.scrolled {
+  padding: 10px 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.navbar.scrolled + .navbar-spacer {
+  height: 55px; /* Should match scrolled navbar height + padding */
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1280px; /* Match your #root max-width */
+  margin: 0 auto;
+  padding: 0 2rem; /* Match your #root padding */
+}
+
+/* Logo */
+.logo a {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+.logo a:hover {
+  color: #646cff; /* Match your existing color scheme */
+}
+
+/* Nav Elements */
+.nav-elements ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 30px;
+}
+
+.nav-elements .nav-link {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 5px 0;
+}
+
+.nav-elements .nav-link:hover {
+  color: #646cff; /* Match your existing color scheme */
+}
+
+/* Animated underline effect */
+.nav-elements .nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #646cff; /* Match your existing color scheme */
+  transition: width 0.3s ease;
+}
+
+.nav-elements .nav-link:hover::after {
+  width: 100%;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  width: 30px;
+  height: 20px;
+  position: relative;
+}
+
+.hamburger span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: #fff;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.hamburger span:nth-child(1) {
+  top: 0;
+}
+
+.hamburger span:nth-child(2) {
+  top: 8px;
+}
+
+.hamburger span:nth-child(3) {
+  top: 16px;
+}
+
+/* Active hamburger state */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 8px;
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 8px;
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: block;
+    z-index: 101;
+  }
+
+  .nav-elements {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 270px;
+    height: 100vh;
+    background: #161a30;
+    padding: 80px 40px;
+    transition: right 0.4s ease-in-out;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+  }
+
+  .nav-elements.active {
+    right: 0;
+  }
+
+  .nav-elements ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-elements li {
+    margin: 15px 0;
+  }
+
+  .nav-elements .nav-link {
+    font-size: 1.1rem;
+    padding: 8px 0;
+  }
+}
