@@ -15,15 +15,16 @@ html {
 
 /* Navbar */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #2c3e50;
-    padding: 15px 20px;
-    color: white;
-    position: relative;
-    z-index: 1000;
+  list-style: none;
+  font-weight: bold;
+  margin-bottom: 10px;
+  width: 100%;
+  text-align: center;
+  background-color: #000000;
 }
+
+
+
 
 /* Logo */
 .logo {
