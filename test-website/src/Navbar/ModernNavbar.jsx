@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./ModernNavbar.css";
+import eiffelTower from "../images/eiffel-tower.png";
 
 function ModernNavbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -46,7 +47,9 @@ function ModernNavbar() {
       <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
         <div className="nav-container">
           <div className="logo">
-            <Link to="/">LOGO</Link>
+            <Link to="/">
+              <img src={eiffelTower} alt="Eiffel Tower Logo" className="logo-image" />
+            </Link>
           </div>
           
           <div className="menu-toggle" onClick={() => setIsOpen(!isOpen)}>
