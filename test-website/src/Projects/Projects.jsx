@@ -12,7 +12,7 @@ function Projects() {
       technologies: ["React", "Node.js", "Express", "MongoDB", "Stripe API"],
       image: "placeholder", // Replace with your actual image path
       demoLink: "https://example.com/demo",
-      codeLink: "https://github.com/yourusername/project-repo"
+      codeLink: "https://github.com/FAU-FullStack-Dev-Spring2025/project-4-parisisley.git"
     },
     {
       id: 2,
