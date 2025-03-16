@@ -51,9 +51,9 @@ function Home() {
     <div className="skill-category">
       <h3>Frontend</h3>
       <ul className="skill-list">
-        <li>React</li>
+        <li>React.js + Vite</li>
         <li>JavaScript</li>
-        <li>HTML5/CSS3</li>
+        <li>HTML/CSS</li>
         <li>Responsive Design</li>
       </ul>
     </div>
@@ -63,45 +63,45 @@ function Home() {
         <li>Node.js</li>
         <li>Express</li>
         <li>RESTful APIs</li>
-        <li>Database Management</li>
+        <li>SQL</li>
+      </ul>
+    </div>
+    <div className="skill-category">
+      <h3>Programming</h3>
+      <ul className="skill-list">
+        <li>C++</li>
+        <li>Python</li>
+        <li>Structured Control Language</li>
+        <li>Arduino</li>
+      </ul>
+    </div>
+    
+    {/* New skill categories */}
+    <div className="skill-category">
+      <h3>Hardware</h3>
+      <ul className="skill-list">
+        <li>Arduino & Microcontrollers</li>
+        <li>Electronics Soldering</li>
+        <li>IoT / Raspberry Pi</li>
+        <li>Circuit Repair</li>
+      </ul>
+    </div>
+    <div className="skill-category">
+      <h3>Design</h3>
+      <ul className="skill-list">
+        <li>Computer-Aided Design (CAD)</li>
+        <li>UX/UI Design</li>
+        <li>NX Siemens CAD</li>
+        <li>Prototyping</li>
       </ul>
     </div>
     <div className="skill-category">
       <h3>Tools</h3>
       <ul className="skill-list">
         <li>Git & GitHub</li>
-        <li>VS Code</li>
-        <li>Figma</li>
-        <li>npm/yarn</li>
-      </ul>
-    </div>
-    
-    {/* New skill categories */}
-    <div className="skill-category">
-      <h3>Design</h3>
-      <ul className="skill-list">
-        <li>UI/UX Design</li>
-        <li>Wireframing</li>
-        <li>Prototyping</li>
-        <li>Design Systems</li>
-      </ul>
-    </div>
-    <div className="skill-category">
-      <h3>Databases</h3>
-      <ul className="skill-list">
-        <li>MongoDB</li>
-        <li>PostgreSQL</li>
-        <li>MySQL</li>
-        <li>Firebase</li>
-      </ul>
-    </div>
-    <div className="skill-category">
-      <h3>DevOps</h3>
-      <ul className="skill-list">
-        <li>CI/CD</li>
-        <li>Docker</li>
-        <li>AWS</li>
-        <li>Deployment</li>
+        <li>Windows OS / macOS</li>
+        <li>IFTTT</li>
+        <li>Adafruit IO</li>
       </ul>
     </div>
   </div>
