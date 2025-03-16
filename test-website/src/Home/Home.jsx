@@ -44,40 +44,68 @@ function Home() {
           </div>
         </div>
       </section>
-
-      {/* Skills Section */}
-      <section className="skills-section">
-        <h2>My Skills</h2>
-        <div className="skills-container">
-          <div className="skill-category">
-            <h3>Frontend</h3>
-            <ul className="skill-list">
-              <li>React</li>
-              <li>JavaScript</li>
-              <li>HTML5/CSS3</li>
-              <li>Responsive Design</li>
-            </ul>
-          </div>
-          <div className="skill-category">
-            <h3>Backend</h3>
-            <ul className="skill-list">
-              <li>Node.js</li>
-              <li>Express</li>
-              <li>RESTful APIs</li>
-              <li>Database Management</li>
-            </ul>
-          </div>
-          <div className="skill-category">
-            <h3>Tools</h3>
-            <ul className="skill-list">
-              <li>Git & GitHub</li>
-              <li>VS Code</li>
-              <li>Figma</li>
-              <li>npm/yarn</li>
-            </ul>
-          </div>
-        </div>
-      </section>
+{/* Skills Section */}
+<section className="skills-section">
+  <h2>My Skills</h2>
+  <div className="skills-container">
+    <div className="skill-category">
+      <h3>Frontend</h3>
+      <ul className="skill-list">
+        <li>React</li>
+        <li>JavaScript</li>
+        <li>HTML5/CSS3</li>
+        <li>Responsive Design</li>
+      </ul>
+    </div>
+    <div className="skill-category">
+      <h3>Backend</h3>
+      <ul className="skill-list">
+        <li>Node.js</li>
+        <li>Express</li>
+        <li>RESTful APIs</li>
+        <li>Database Management</li>
+      </ul>
+    </div>
+    <div className="skill-category">
+      <h3>Tools</h3>
+      <ul className="skill-list">
+        <li>Git & GitHub</li>
+        <li>VS Code</li>
+        <li>Figma</li>
+        <li>npm/yarn</li>
+      </ul>
+    </div>
+    
+    {/* New skill categories */}
+    <div className="skill-category">
+      <h3>Design</h3>
+      <ul className="skill-list">
+        <li>UI/UX Design</li>
+        <li>Wireframing</li>
+        <li>Prototyping</li>
+        <li>Design Systems</li>
+      </ul>
+    </div>
+    <div className="skill-category">
+      <h3>Databases</h3>
+      <ul className="skill-list">
+        <li>MongoDB</li>
+        <li>PostgreSQL</li>
+        <li>MySQL</li>
+        <li>Firebase</li>
+      </ul>
+    </div>
+    <div className="skill-category">
+      <h3>DevOps</h3>
+      <ul className="skill-list">
+        <li>CI/CD</li>
+        <li>Docker</li>
+        <li>AWS</li>
+        <li>Deployment</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
       {/* Featured Projects Preview */}
       <section className="featured-projects">

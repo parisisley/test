@@ -37,7 +37,7 @@ const ContactPage = () => {
           </div>
           <div className="contact-text">
             <a href="#">South Florida</a>
-            <span>Available for remote work</span>
+            <span>Dade | Broward | West Palm</span>
           </div>
         </div>
       </div>
