@@ -3,11 +3,11 @@ body {
   margin: 0;
   padding: 0;
   background-color: #eae0c8; /* Light beige */
-  color: #5a3e2b; /* Dark brown */
+  /* color: #5a3e2b; Dark brown */
 }
 
 header {
-  background-color: #8b5e3b; /* Earthy brown */
+  /* background-color: #8b5e3b; Earthy brown */
   color: white;
   padding: 20px;
 }
