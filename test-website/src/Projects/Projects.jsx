@@ -1,18 +1,19 @@
 import React, { useState } from "react";
 import "./Projects.css";
+import timetable from '../images/timetablepic.png';
 
 function Projects() {
   // Example project data - replace with your actual projects
   const projects = [
     {
       id: 1,
-      title: "E-commerce Platform",
+      title: "Time Table Project",
       category: "Web Development",
       description: "A full-stack e-commerce platform built with React, Node.js, and MongoDB. Features include user authentication, product filtering, shopping cart, and payment integration.",
-      technologies: ["React", "Node.js", "Express", "MongoDB", "Stripe API"],
-      image: "placeholder", // Replace with your actual image path
+      technologies: ["React", "Node.js", "Github", "HTML", "CSS"],
+      imageURL: timetable, // Replace with your actual image path
       demoLink: "https://example.com/demo",
-      codeLink: "https://github.com/FAU-FullStack-Dev-Spring2025/project-4-parisisley.git"
+      codeLink: "https://github.com/parisisley/timetable.git"
     },
     {
       id: 2,
