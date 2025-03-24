@@ -37,13 +37,13 @@ function Projects() {
     },
     {
       id: 4,
-      title: "Portfolio Website",
+      title: "Screenshot Webpage",
       category: "Web Development",
       description: "A responsive portfolio website for showcasing projects and skills. Built with React and modern CSS techniques.",
       technologies: ["React", "CSS3", "Responsive Design", "GitHub Pages"],
       image: "placeholder", // Replace with your actual image path
       demoLink: "https://example.com/demo",
-      codeLink: "https://github.com/yourusername/project-repo"
+      codeLink: "https://github.com/parisisley/screenshotmaker.git"
     },
     {
       id: 5,
