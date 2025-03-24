@@ -39,7 +39,7 @@ function Projects() {
       id: 4,
       title: "Screenshot Webpage",
       category: "Web Development",
-      description: "his app uses the ApiFlash API to take screenshots of a given website with a variety of parameters.",
+      description: "This app uses the ApiFlash API to take screenshots of a given website with a variety of parameters.",
       technologies: ["React", "CSS3", "Responsive Design", "GitHub Pages"],
       image: "placeholder", // Replace with your actual image path
       demoLink: "https://example.com/demo",
@@ -47,10 +47,10 @@ function Projects() {
     },
     {
       id: 5,
-      title: "Weather Forecast App",
+      title: "Magnetometer Shark: An Interactive Exhibit",
       category: "Web Development",
-      description: "A weather forecast application that pulls data from an API and displays current and forecasted weather conditions based on user location or search.",
-      technologies: ["JavaScript", "Weather API", "HTML5", "CSS3"],
+      description: "Exhibit prop that uses magnometer to trigger arduino when it encounters a magnet. Causing plush shark to light LED eyeballs, vibrate, and make noise to indicate that the target was found.",
+      technologies: ["C++", "Arduino", "Soldering", "ELEGOO"],
       image: "placeholder", // Replace with your actual image path
       demoLink: "https://example.com/demo",
       codeLink: "https://github.com/yourusername/project-repo"
