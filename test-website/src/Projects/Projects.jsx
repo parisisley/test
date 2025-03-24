@@ -17,23 +17,23 @@ function Projects() {
     },
     {
       id: 2,
-      title: "Social Media Dashboard",
+      title: "Cat Database",
       category: "UI/UX Design",
-      description: "A responsive dashboard design for a social media analytics platform. Includes data visualization, user management, and content scheduling features.",
-      technologies: ["React", "Chart.js", "CSS Grid", "Figma", "Redux"],
-      image: "placeholder", // Replace with your actual image path
+      description: "This app is about to creating a data dashboard that provides an at-a-glance summary of information gathered from a public API. This one is about cats.",
+      technologies: ["React", "Github", "API", "HTML", "CSS"],
+      image: "/assets/images/cat-database.png",      
       demoLink: "https://example.com/demo",
-      codeLink: "https://github.com/yourusername/project-repo"
+      codeLink: "https://github.com/parisisley/cat-database.git"
     },
     {
       id: 3,
-      title: "Task Management App",
-      category: "Mobile Development",
-      description: "A task management application with drag-and-drop functionality, team collaboration, and progress tracking. Built with React Native and Firebase.",
-      technologies: ["React Native", "Firebase", "Redux", "Styled Components"],
+      title: "Aurora Comics Website",
+      category: "Web Development",
+      description: "Aurora comics is an online bookstore with infinite titles available.",
+      technologies: ["React.js", "HTML", "CSS", "JavaScript"],
       image: "placeholder", // Replace with your actual image path
-      demoLink: "https://example.com/demo",
-      codeLink: "https://github.com/yourusername/project-repo"
+      demoLink: "www.aurora-comics.com",
+      codeLink: ""
     },
     {
       id: 4,
@@ -51,6 +51,16 @@ function Projects() {
       category: "Web Development",
       description: "A weather forecast application that pulls data from an API and displays current and forecasted weather conditions based on user location or search.",
       technologies: ["JavaScript", "Weather API", "HTML5", "CSS3"],
+      image: "placeholder", // Replace with your actual image path
+      demoLink: "https://example.com/demo",
+      codeLink: "https://github.com/yourusername/project-repo"
+    },
+    {
+      id: 6,
+      title: "Ball Count Releaser: An Interactive Exhibit",
+      category: "Electrical Engineering",
+      description: "Exciting museum exhibit that uses suction to shoot balls through acrylic tubing, triggering a sensor that counts 150 balls in a cage, then releases them at once.",
+      technologies: ["Arduino", "C++", "Soldering", "ELEGOO"],
       image: "placeholder", // Replace with your actual image path
       demoLink: "https://example.com/demo",
       codeLink: "https://github.com/yourusername/project-repo"

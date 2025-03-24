@@ -17,7 +17,7 @@ const ContactPage = () => {
           </div>
           <div className="contact-text">
             <a href="tel:+19542709492">954-270-9492</a>
-            <span>Available Mon-Fri, 9AM-6PM</span>
+            <span>Leave a message or text me.</span>
           </div>
         </div>
         

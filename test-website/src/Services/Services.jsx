@@ -14,37 +14,37 @@ function Services() {
       title: '3D Printing',
       description: '3D printing services for prototypes, models, and unique designs.',
       imageUrl: printing,
-      pricing: '',
+      pricing: '$30/production hour + $50 for modeling. ',
     },
     {
       title: 'Home & Office IT Services',
       description: 'Setup and support for computers, networks, and devices.',
       imageUrl: it,
-      pricing: '',
+      pricing: '$100/hour',
     },
     {
       title: 'Web Development',
       description: 'Build modern, responsive websites tailored to your business needs.',
       imageUrl: webdesign,
-      pricing: '',
+      pricing: '$200 for one page, responsive webpage. $500 for multipage website.',
     },
     {
       title: 'Pet Drop ins',
       description: 'Quick visits to check on, feed, and provide companionship for your pets.',
       imageUrl: dropin,
-      pricing: '',
+      pricing: '$35 for half an hour OR $50/hour.',
     },
     {
       title: 'Dog Walking',
       description: 'Professional dog walking services to keep your pup healthy and happy.',
       imageUrl: dogwalking,
-      pricing: '',
+      pricing: '$50/hour',
     },
     {
       title: 'Pet Sitting',
       description: 'In-home pet sitting services when you are away, providing comfort and care.',
       imageUrl: petsitting,
-      pricing: '',
+      pricing: '$75/night. Additional $15 for each pet.',
     },
   ];
 

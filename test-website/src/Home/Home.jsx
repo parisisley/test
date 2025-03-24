@@ -11,7 +11,7 @@ function Home() {
       <section className="hero-section">
         <div className="hero-content">
           <h1>Paris Isley</h1>
-          <p className="tagline">Web Developer & Designer</p>
+          <p className="tagline">Engineer & Pet Lover</p>
         </div>
       </section>
 
@@ -24,14 +24,15 @@ function Home() {
           <div className="about-text">
             <h2>About Me</h2>
             <p>
-              Hello! I'm Paris, a passionate web developer with a focus on creating 
-              intuitive and engaging user experiences. I love bringing ideas to life 
-              through code and design, always staying up-to-date with the latest 
-              technologies and best practices in the industry.
+            Hello! I’m Paris. I’m a passionate engineer specializing in electronics and web development. 
+            I love bringing ideas to life through code and design, always staying up to date with the latest 
+            technologies and best practices in the industry.
             </p>
             <p>
-              When I'm not coding, you might find me exploring new design trends, 
-              contributing to open source projects, or enjoying the outdoors.
+            When I’m not coding or building robots, you’ll find me dedicated to my pet-sitting business, providing reliable care for pets when their owners need me.
+            Want to see what I’ve been working on? Check out my Projects page to explore my latest creations, or visit Services to learn how I can help bring your ideas to life!
+
+
             </p>
             <div className="resume-download">
               <a href={resumePDF} download className="download-button">
@@ -130,11 +131,11 @@ function Home() {
       </section>
 
       {/* Call to Action */}
-      <section className="cta-section">
-        <h2>Interested in Working Together?</h2>
-        <p>I'm always open to discussing new projects and opportunities.</p>
-        <a href="/contact" className="contact-button">Get In Touch</a>
-      </section>
+      {/* <section className="cta-section"> */}
+        {/* <h2>Interested in Working Together?</h2> */}
+        {/* <p>I'm always open to discussing new projects and opportunities.</p> */}
+        {/* <a href="/contact" className="contact-button">Get In Touch</a> */}
+      {/* </section> */}
     </div>
   );
 }
