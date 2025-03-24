@@ -32,8 +32,8 @@ function Projects() {
       description: "Aurora comics is an online bookstore with infinite titles available.",
       technologies: ["React.js", "HTML", "CSS", "JavaScript"],
       image: "placeholder", // Replace with your actual image path
-      demoLink: "www.aurora-comics.com",
-      codeLink: "www.aurora-comics.com"
+      demoLink: "https://aurora-comics.com/",
+      codeLink: "https://aurora-comics.com/"
     },
     {
       id: 4,
