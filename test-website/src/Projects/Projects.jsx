@@ -33,7 +33,7 @@ function Projects() {
       technologies: ["React.js", "HTML", "CSS", "JavaScript"],
       image: "placeholder", // Replace with your actual image path
       demoLink: "www.aurora-comics.com",
-      codeLink: ""
+      codeLink: "www.aurora-comics.com"
     },
     {
       id: 4,
