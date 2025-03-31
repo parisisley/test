@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Projects.css";
 import timetable from '../images/timetablepic.png';
+import catdatabaseimg from '../images/cat-databaseimg.png';
 
 function Projects() {
   // Example project data - replace with your actual projects
@@ -11,7 +12,7 @@ function Projects() {
       category: "Web Development",
       description: "A full-stack e-commerce platform built with React, Node.js, and MongoDB. Features include user authentication, product filtering, shopping cart, and payment integration.",
       technologies: ["React", "Node.js", "Github", "HTML", "CSS"],
-      imageURL: timetable, // Replace with your actual image path
+      gallery: [timetable, timetable, timetable], // Replace with your actual gallery images
       demoLink: "https://example.com/demo",
       codeLink: "https://github.com/parisisley/timetable.git"
     },
@@ -21,7 +22,7 @@ function Projects() {
       category: "UI/UX Design",
       description: "This app is about to creating a data dashboard that provides an at-a-glance summary of information gathered from a public API. This one is about cats.",
       technologies: ["React", "Github", "API", "HTML", "CSS"],
-      image: "/assets/images/cat-database.png",      
+      gallery: [catdatabaseimg], // Replace with actual gallery images
       demoLink: "https://example.com/demo",
       codeLink: "https://github.com/parisisley/cat-database.git"
     },
@@ -31,17 +32,17 @@ function Projects() {
       category: "Web Development",
       description: "Aurora comics is an online bookstore with infinite titles available.",
       technologies: ["React.js", "HTML", "CSS", "JavaScript"],
-      image: "placeholder", // Replace with your actual image path
+      gallery: ["placeholder", "placeholder"], // Replace with your actual gallery images
       demoLink: "https://aurora-comics.com/",
       codeLink: "https://aurora-comics.com/"
     },
     {
       id: 4,
-      title: "Screenshot Webpage",
+      title: "Screenshot App",
       category: "Web Development",
       description: "This app uses the ApiFlash API to take screenshots of a given website with a variety of parameters.",
       technologies: ["React", "CSS3", "Responsive Design", "GitHub Pages"],
-      image: "placeholder", // Replace with your actual image path
+      gallery: ["placeholder", "placeholder"], // Replace with your actual gallery images
       demoLink: "https://example.com/demo",
       codeLink: "https://github.com/parisisley/screenshotmaker.git"
     },
@@ -51,7 +52,7 @@ function Projects() {
       category: "Web Development",
       description: "Exhibit prop that uses magnometer to trigger arduino when it encounters a magnet. Causing plush shark to light LED eyeballs, vibrate, and make noise to indicate that the target was found.",
       technologies: ["C++", "Arduino", "Soldering", "ELEGOO"],
-      image: "placeholder", // Replace with your actual image path
+      gallery: ["placeholder", "placeholder"], // Replace with your actual gallery images
       demoLink: "https://example.com/demo",
       codeLink: "https://github.com/yourusername/project-repo"
     },
@@ -61,7 +62,7 @@ function Projects() {
       category: "Electrical Engineering",
       description: "Exciting museum exhibit that uses suction to shoot balls through acrylic tubing, triggering a sensor that counts 150 balls in a cage, then releases them at once.",
       technologies: ["Arduino", "C++", "Soldering", "ELEGOO"],
-      image: "placeholder", // Replace with your actual image path
+      gallery: ["placeholder", "placeholder"], // Replace with your actual gallery images
       demoLink: "https://example.com/demo",
       codeLink: "https://github.com/yourusername/project-repo"
     }
@@ -69,6 +70,10 @@ function Projects() {
 
   // Filter state
   const [filter, setFilter] = useState("All");
+  // Gallery modal state
+  const [galleryOpen, setGalleryOpen] = useState(false);
+  const [currentProject, setCurrentProject] = useState(null);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
   
   // Get unique categories
   const categories = ["All", ...new Set(projects.map(project => project.category))];
@@ -77,6 +82,36 @@ function Projects() {
   const filteredProjects = filter === "All" 
     ? projects 
     : projects.filter(project => project.category === filter);
+
+  // Open gallery modal
+  const openGallery = (project) => {
+    setCurrentProject(project);
+    setCurrentImageIndex(0);
+    setGalleryOpen(true);
+  };
+
+  // Close gallery modal
+  const closeGallery = () => {
+    setGalleryOpen(false);
+    setCurrentProject(null);
+  };
+
+  // Navigation for gallery
+  const nextImage = () => {
+    if (currentProject) {
+      setCurrentImageIndex((prevIndex) => 
+        prevIndex === currentProject.gallery.length - 1 ? 0 : prevIndex + 1
+      );
+    }
+  };
+
+  const prevImage = () => {
+    if (currentProject) {
+      setCurrentImageIndex((prevIndex) => 
+        prevIndex === 0 ? currentProject.gallery.length - 1 : prevIndex - 1
+      );
+    }
+  };
 
   return (
     <div className="projects-container">
@@ -103,17 +138,13 @@ function Projects() {
       <div className="projects-grid">
         {filteredProjects.map(project => (
           <div className="project-card" key={project.id}>
-            <div className="project-image-container">
-              <div className="project-image placeholder"></div>
-              <div className="project-overlay">
-                <div className="project-links">
-                  <a href={project.demoLink} target="_blank" rel="noopener noreferrer" className="project-link">
-                    Live Demo
-                  </a>
-                  <a href={project.codeLink} target="_blank" rel="noopener noreferrer" className="project-link">
-                    View Code
-                  </a>
-                </div>
+            <div 
+              className="project-preview"
+              onClick={() => openGallery(project)}
+            >
+              <div className="preview-content">
+                <span className="view-gallery-text">View Gallery</span>
+                <span className="gallery-count">{project.gallery.length} images</span>
               </div>
             </div>
             <div className="project-info">
@@ -125,10 +156,50 @@ function Projects() {
                   <span key={index} className="tech-tag">{tech}</span>
                 ))}
               </div>
+              <div className="project-links-bottom">
+                <a href={project.demoLink} target="_blank" rel="noopener noreferrer" className="project-link">
+                  Live Demo
+                </a>
+                <a href={project.codeLink} target="_blank" rel="noopener noreferrer" className="project-link">
+                  View Code
+                </a>
+              </div>
             </div>
           </div>
         ))}
       </div>
+
+      {/* Gallery Modal */}
+      {galleryOpen && currentProject && (
+        <div className="gallery-modal">
+          <div className="gallery-content">
+            <button className="gallery-close" onClick={closeGallery}>×</button>
+            <h2>{currentProject.title} Gallery</h2>
+            
+            <div className="gallery-image-container">
+              {currentProject.gallery[currentImageIndex] === "placeholder" ? (
+                <div className="gallery-placeholder">
+                  <span>Image placeholder</span>
+                </div>
+              ) : (
+                <img 
+                  src={currentProject.gallery[currentImageIndex]} 
+                  alt={`${currentProject.title} screenshot ${currentImageIndex + 1}`} 
+                  className="gallery-image" 
+                />
+              )}
+              
+              <div className="gallery-navigation">
+                <button className="gallery-nav-button" onClick={prevImage}>&#10094;</button>
+                <span className="gallery-counter">
+                  {currentImageIndex + 1} / {currentProject.gallery.length}
+                </span>
+                <button className="gallery-nav-button" onClick={nextImage}>&#10095;</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Contact CTA */}
       <section className="projects-cta">

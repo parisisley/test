@@ -26,7 +26,7 @@ function Services() {
       title: 'Web Development',
       description: 'Build modern, responsive websites tailored to your business needs.',
       imageUrl: webdesign,
-      pricing: '$200 for one page, responsive webpage. $500 for multipage website.',
+      pricing: '$200 for a one page, responsive webpage. $500 for multipage website.',
     },
     {
       title: 'Pet Drop ins',
