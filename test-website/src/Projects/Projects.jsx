@@ -2,6 +2,15 @@ import React, { useState } from "react";
 import "./Projects.css";
 import timetable from '../images/timetablepic.png';
 import catdatabaseimg from '../images/cat-databaseimg.png';
+import citrus1 from '../images/DSCitrus.jpeg';
+import citrus2 from '../images/DSCitrus2.jpeg';
+import citrus3 from '../images/DSCitrus3.jpeg';
+import citrus4 from '../images/DSCitrus4.jpeg';
+import citrus5 from '../images/DSCitrus5.jpeg';
+import citrus6 from '../images/DSCitrus6.jpeg';
+import FPL1 from '../images/FPL1.jpeg';
+import FPL2 from '../images/FPL2.jpeg';
+
 
 function Projects() {
   // Example project data - replace with your actual projects
@@ -62,7 +71,17 @@ function Projects() {
       category: "Electrical Engineering",
       description: "Exciting museum exhibit that uses suction to shoot balls through acrylic tubing, triggering a sensor that counts 150 balls in a cage, then releases them at once.",
       technologies: ["Arduino", "C++", "Soldering", "ELEGOO"],
-      gallery: ["placeholder", "placeholder"], // Replace with your actual gallery images
+      gallery: [citrus1, citrus2, citrus3, citrus4, citrus5, citrus6], // Replace with your actual gallery images
+      demoLink: "https://example.com/demo",
+      codeLink: "https://github.com/yourusername/project-repo"
+    },
+    {
+      id: 6,
+      title: "FPL Electric Vehicle Charging Station: On Site Repair",
+      category: "Netowrk Testing",
+      description: "Tested network connections and interactive features, including LEDs and touchscreen kiosks, to ensure the overall functionality of an interactive EV charging station powered by FPL in West Palm Beach.",
+      technologies: ["Arduino", "C++", "Soldering", "ELEGOO"],
+      gallery: [FPL1, FPL2], // Replace with your actual gallery images
       demoLink: "https://example.com/demo",
       codeLink: "https://github.com/yourusername/project-repo"
     }
@@ -143,7 +162,7 @@ function Projects() {
               onClick={() => openGallery(project)}
             >
               <div className="preview-content">
-                <span className="view-gallery-text">View Gallery</span>
+                <span className="view-gallery-text">Project Gallery</span>
                 <span className="gallery-count">{project.gallery.length} images</span>
               </div>
             </div>
@@ -157,9 +176,9 @@ function Projects() {
                 ))}
               </div>
               <div className="project-links-bottom">
-                <a href={project.demoLink} target="_blank" rel="noopener noreferrer" className="project-link">
-                  Live Demo
-                </a>
+                {/* <a href={project.demoLink} target="_blank" rel="noopener noreferrer" className="project-link"> */}
+                 {/* Live Demo */}
+                {/* </a> */}
                 <a href={project.codeLink} target="_blank" rel="noopener noreferrer" className="project-link">
                   View Code
                 </a>
