@@ -76,10 +76,20 @@ function Projects() {
       codeLink: "https://github.com/yourusername/project-repo"
     },
     {
-      id: 6,
+      id: 7,
       title: "FPL Electric Vehicle Charging Station: On Site Repair",
-      category: "Netowrk Testing",
+      category: "Network Testing",
       description: "Tested network connections and interactive features, including LEDs and touchscreen kiosks, to ensure the overall functionality of an interactive EV charging station powered by FPL in West Palm Beach.",
+      technologies: ["Arduino", "C++", "Soldering", "ELEGOO"],
+      gallery: [FPL1, FPL2], // Replace with your actual gallery images
+      demoLink: "https://example.com/demo",
+      codeLink: "https://github.com/yourusername/project-repo"
+    },
+    {
+      id: 7,
+      title: "VLSF Booth: Educational Program 3D Printed Props ",
+      category: "CAD",
+      description: "Used CAD and Bambu Slicer software to help the Education department facilitate a program on a large scale free admission day at The Museum of Discovery and Science.",
       technologies: ["Arduino", "C++", "Soldering", "ELEGOO"],
       gallery: [FPL1, FPL2], // Replace with your actual gallery images
       demoLink: "https://example.com/demo",
